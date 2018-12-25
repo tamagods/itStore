@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import firebase from 'firebase';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props); var config = {
+      apiKey: "AIzaSyAy3U6PI5cIzxrbsxrZvSJJzmVsmplL0j0",
+      authDomain: "itstore-d8e6f.firebaseapp.com",
+      databaseURL: "https://itstore-d8e6f.firebaseio.com",
+      projectId: "itstore-d8e6f",
+      storageBucket: "itstore-d8e6f.appspot.com",
+      messagingSenderId: "547222634698"
+    };
+    firebase.initializeApp(config);
+  }
+
   render() {
     return (
       <div className="App">
